@@ -1,0 +1,10 @@
+Not mutuals:
+	torvalds (https://github.com/torvalds)
+	Mojang (https://github.com/Mojang)
+	discord (https://github.com/discord)
+	gustavoguanabara (https://github.com/gustavoguanabara)
+	fga-eps-mds (https://github.com/fga-eps-mds)
+	free-educa (https://github.com/free-educa)
+	code50 (https://github.com/code50)
+	kauamiguel (https://github.com/kauamiguel)
+	Team-CodeVenture (https://github.com/Team-CodeVenture)
