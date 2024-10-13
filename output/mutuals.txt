@@ -1,4 +1,4 @@
-Mutuals:
+Mutuals Users:
 	esin (https://github.com/esin)
 	kenjinote (https://github.com/kenjinote)
 	gamemann (https://github.com/gamemann)
@@ -65,3 +65,5 @@ Mutuals:
 	NastyaS0S (https://github.com/NastyaS0S)
 	mbahomaid (https://github.com/mbahomaid)
 	Sheikhmahii (https://github.com/Sheikhmahii)
+Mutuals Organizations:
+	

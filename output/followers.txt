@@ -1,4 +1,4 @@
-Followers:
+Followers Users:
 	esin (https://github.com/esin)
 	kenjinote (https://github.com/kenjinote)
 	gamemann (https://github.com/gamemann)
@@ -8,7 +8,6 @@ Followers:
 	chipnertkj (https://github.com/chipnertkj)
 	pushitchaudhary (https://github.com/pushitchaudhary)
 	Daynlight (https://github.com/Daynlight)
-	hexarch (https://github.com/hexarch)
 	OfficialCodeVoyage (https://github.com/OfficialCodeVoyage)
 	JohnMwendwa (https://github.com/JohnMwendwa)
 	D-Mass-RR (https://github.com/D-Mass-RR)
@@ -71,3 +70,5 @@ Followers:
 	NastyaS0S (https://github.com/NastyaS0S)
 	mbahomaid (https://github.com/mbahomaid)
 	Sheikhmahii (https://github.com/Sheikhmahii)
+Followers Organizations:
+	

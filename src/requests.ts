@@ -1,13 +1,21 @@
+type Methods = 'GET' | 'POST' | 'PUT' | 'DELETE';
+
 class GitHubAPIRequest {
-    public static async request<T>(endpoint: string, token: string): Promise<T | Error> {
+    public static async request<T>(method: Methods, endpoint: string, token: string): Promise<T> {
+        const url = `${process.env.GITHUB_API_ENDPOINT}${endpoint}`;
+        const headers = { 'Authorization': `token ${token}` };
+
         try {
-            const response = await fetch(`https://api.github.com${endpoint}`, {
-                headers: { 'Authorization': `token ${token}` }
-            });
+            const response = await fetch(url, { method, headers });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
 
             return await response.json() as T;
         } catch (error) {
-            return error as Error;
+            console.error('Request failed', error);
+            throw error;
         }
     }
 
@@ -16,9 +24,8 @@ class GitHubAPIRequest {
         let page = 1;
 
         while (true) {
-            const response = await GitHubAPIRequest.request<T[] | Error>(`${endpoint}?page=${page}`, token);
+            const response = await GitHubAPIRequest.request<T[]>('GET', `${endpoint}?page=${page}`, token);
 
-            if (response instanceof Error) throw response;
             if (response.length === 0) break;
 
             data.push(...response);

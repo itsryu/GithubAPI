@@ -1,10 +1,8 @@
-Not mutuals:
+Not mutuals Users:
 	torvalds (https://github.com/torvalds)
-	Mojang (https://github.com/Mojang)
-	discord (https://github.com/discord)
-	gustavoguanabara (https://github.com/gustavoguanabara)
-	fga-eps-mds (https://github.com/fga-eps-mds)
-	free-educa (https://github.com/free-educa)
-	code50 (https://github.com/code50)
-	kauamiguel (https://github.com/kauamiguel)
-	Team-CodeVenture (https://github.com/Team-CodeVenture)
+Not mutuals Organizations:
+	Mojang [Organization] (https://github.com/Mojang)
+	discord [Organization] (https://github.com/discord)
+	fga-eps-mds [Organization] (https://github.com/fga-eps-mds)
+	free-educa [Organization] (https://github.com/free-educa)
+	Team-CodeVenture [Organization] (https://github.com/Team-CodeVenture)

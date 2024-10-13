@@ -25,9 +25,9 @@ class GitHub implements GitHubAPIRequest {
             throw new Error('Invalid credentials');
         }
 
-        const response = await GitHubAPIRequest.request<User | Error>(`/user`, this.token);
+        const { login } = await GitHubAPIRequest.request<User>('GET', `/user`, this.token);
 
-        if (response instanceof Error || response.login !== this.username) {
+        if (login !== this.username) {
             throw new Error('GitHub username does not match token');
         }
     }
@@ -51,15 +51,21 @@ class GitHub implements GitHubAPIRequest {
         const followers = await this.getFollowers();
         const following = await this.getFollowing();
 
-        return following.filter(user => !followers.some(follower => follower.login === user.login)); 
+        return following.filter(user => !followers.some(follower => follower.login === user.login));
     }
-    
+
     public async getRepositories(): Promise<Repository> {
-        const response = await GitHubAPIRequest.request<Repository | Error>(`/users/${this.username}/repos`, this.token);
-        
-        if (response instanceof Error) throw response;
+        const response = await GitHubAPIRequest.request<Repository>('GET', `/users/${this.username}/repos`, this.token);
 
         return response;
+    }
+
+    public async postUnfollowNotMutuals(): Promise<void> {
+        const notMutuals = await this.getNotMutuals();
+
+        for (const user of notMutuals) {
+            await GitHubAPIRequest.request('POST', `/user/following/${user.login}`, this.token);
+        }
     }
 }
 
